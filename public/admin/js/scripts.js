@@ -127,21 +127,66 @@ if (showAlert) {
 
 // upload image
 const uploadImage = document.querySelector("[upload-image]");
-const clearImage = uploadImage.querySelector("[clear-image]");
-if(uploadImage){
-    const uploadImageInput = uploadImage.querySelector("[upload-image-input]");
-    const uploadImagePreview = uploadImage.querySelector("[upload-image-preview]");
-    uploadImageInput.addEventListener("change", (e) => {
-        const file = e.target.files[0];
-        if(file){
-            uploadImagePreview.src = URL.createObjectURL(file);
-            clearImage.classList.remove("d-none");
-        }
-    });
-    clearImage.addEventListener("click", () => {
-        uploadImageInput.value = "";
-        uploadImagePreview.src = "";
-        clearImage.classList.add("d-none");
-    });
+if (uploadImage) {
+  const clearImage = uploadImage.querySelector("[clear-image]");
+  const uploadImageInput = uploadImage.querySelector("[upload-image-input]");
+  const uploadImagePreview = uploadImage.querySelector(
+    "[upload-image-preview]",
+  );
+  uploadImageInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      uploadImagePreview.src = URL.createObjectURL(file);
+      clearImage.classList.remove("d-none");
+    }
+  });
+  clearImage.addEventListener("click", () => {
+    uploadImageInput.value = "";
+    uploadImagePreview.src = "";
+    clearImage.classList.add("d-none");
+  });
 }
 // End upload image
+
+// Sort
+const sort = document.querySelector("[sort]");
+if (sort) {
+  const sortSelect = sort.querySelector("[sort-select]");
+  const sortClear = sort.querySelector("[sort-clear]");
+  const url = new URL(window.location.href);
+
+  if (sortSelect) {
+    sortSelect.addEventListener("change", (e) => {
+      const value = e.target.value;
+      const [sortKey, sortValue] = value.split("-");
+      if (sortKey && sortValue) {
+        url.searchParams.set("sortKey", sortKey);
+        url.searchParams.set("sortValue", sortValue);
+      } else {
+        url.searchParams.delete("sortKey");
+        url.searchParams.delete("sortValue");
+      }
+      window.location.href = url.href;
+    });
+  }
+
+  if (sortClear) {
+    sortClear.addEventListener("click", (e) => {
+      url.searchParams.delete("sortKey");
+      url.searchParams.delete("sortValue");
+      sortSelect.value = "";
+      window.location.href = url.href;
+    });
+  }
+
+  const sortKey = url.searchParams.get("sortKey");
+  const sortValue = url.searchParams.get("sortValue");
+  if (sortKey && sortValue) {
+    const stringSort = sortKey + "-" + sortValue;
+    const optionSelected = sortSelect.querySelector(
+      `option[value="${stringSort}"]`,
+    );
+    optionSelected.selected = true;
+  }
+}
+// End sort
