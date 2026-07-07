@@ -1,0 +1,19 @@
+mixin alert (time = 3000)
+    - if(messages.success) 
+        .message.info
+            div(
+                class="alert alert-success d-flex align-items-center justify-content-between",
+                data-time=time,
+                show-alert
+            ) 
+                span #{messages.success}
+                span(close-alert class="badge badge-light" style="cursor: pointer; color: #000; font-size: 14px;") x
+    - if(messages.error) 
+        .message.info
+            div(
+                class="alert alert-danger d-flex align-items-center justify-content-between",
+                data-time=time,
+                show-alert
+            ) 
+                span #{messages.error}
+                span(close-alert class="badge badge-light" style="cursor: pointer; color: #000; font-size: 14px;") x

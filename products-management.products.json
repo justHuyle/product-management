@@ -1,0 +1,460 @@
+[{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c0b"
+  },
+  "title": "Điện thoại iPhone 15 Pro",
+  "description": "Phiên bản 256GB, khung titan siêu bền, camera 48MP.",
+  "price": 28990000,
+  "discountPercentage": 10,
+  "stock": 45,
+  "thumbnail": "https://example.com/images/iphone-15-pro.jpg",
+  "status": "active",
+  "position": 1,
+  "deleted": true,
+  "deletedAt": {
+    "$date": "2026-07-02T16:27:50.138Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c0c"
+  },
+  "title": "Tai nghe Bluetooth Sony WH-1000XM5",
+  "description": "Tai nghe chụp tai chống ồn chủ động đỉnh cao thời lượng pin 30 giờ.",
+  "price": 6490000,
+  "discountPercentage": 15,
+  "stock": 20,
+  "thumbnail": "https://example.com/images/sony-wh1000xm5.jpg",
+  "status": "active",
+  "position": 2,
+  "deleted": true
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c0d"
+  },
+  "title": "Laptop Asus ROG Strix G16",
+  "description": "Laptop gaming cấu hình khủng Core i7, RTX 4060, màn hình 165Hz.",
+  "price": 34990000,
+  "discountPercentage": 8,
+  "stock": 12,
+  "thumbnail": "https://example.com/images/asus-rog-g16.jpg",
+  "status": "active",
+  "position": 3,
+  "deleted": true,
+  "deletedAt": {
+    "$date": "2026-07-02T16:27:50.138Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c0e"
+  },
+  "title": "Bàn phím cơ Keychron K2 V2",
+  "description": "Bàn phím cơ không dây, layout 75%, Gateron Switch.",
+  "price": 1850000,
+  "discountPercentage": 5,
+  "stock": 50,
+  "thumbnail": "https://example.com/images/keychron-k2.jpg",
+  "status": "active",
+  "position": 4,
+  "deleted": true,
+  "deletedAt": {
+    "$date": "2026-07-02T16:00:06.820Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c0f"
+  },
+  "title": "Chuột Logitech MX Master 3S",
+  "description": "Chuột không dây công thái học tối ưu cho dân văn phòng và coder.",
+  "price": 2490000,
+  "discountPercentage": 12,
+  "stock": 0,
+  "thumbnail": "https://example.com/images/mx-master-3s.jpg",
+  "status": "active",
+  "position": 5,
+  "deleted": true,
+  "deletedAt": {
+    "$date": "2026-07-02T16:00:10.871Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c10"
+  },
+  "title": "Màn hình Dell UltraSharp U2723QE",
+  "description": "Màn hình 27 inch 4K độ phủ màu 100% sRGB, chuyên đồ họa.",
+  "price": 11500000,
+  "discountPercentage": 7,
+  "stock": 8,
+  "thumbnail": "https://example.com/images/dell-u2723qe.jpg",
+  "status": "active",
+  "position": 6,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c11"
+  },
+  "title": "Đồng hồ thông minh Apple Watch Series 9",
+  "description": "Theo dõi sức khỏe, đo nhịp tim, tính năng chạm hai lần độc đáo.",
+  "price": 10490000,
+  "discountPercentage": 10,
+  "stock": 30,
+  "thumbnail": "https://example.com/images/apple-watch-s9.jpg",
+  "status": "active",
+  "position": 7,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c12"
+  },
+  "title": "Sạc dự phòng Anker PowerCore 24K",
+  "description": "Dung lượng 24000mAh, hỗ trợ sạc nhanh PD 140W cho cả laptop.",
+  "price": 2100000,
+  "discountPercentage": 20,
+  "stock": 100,
+  "thumbnail": "https://example.com/images/anker-24k.jpg",
+  "status": "active",
+  "position": 8,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c13"
+  },
+  "title": "Loa Bluetooth JBL Charge 5",
+  "description": "Âm thanh mạnh mẽ, chống nước IP67, thời gian phát nhạc 20 tiếng.",
+  "price": 3990000,
+  "discountPercentage": 15,
+  "stock": 15,
+  "thumbnail": "https://example.com/images/jbl-charge-5.jpg",
+  "status": "inactive",
+  "position": 9,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c14"
+  },
+  "title": "Máy tính bảng iPad Air 5 M1",
+  "description": "Màn hình Liquid Retina 10.9 inch, chip M1 hiệu năng vượt trội.",
+  "price": 14290000,
+  "discountPercentage": 9,
+  "stock": 25,
+  "thumbnail": "https://example.com/images/ipad-air-5.jpg",
+  "status": "active",
+  "position": 10,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c15"
+  },
+  "title": "Ổ cứng SSD Samsung 990 Pro 1TB",
+  "description": "SSD NVMe PCIe Gen4 x4 tốc độ đọc ghi lên tới 7450MB/s.",
+  "price": 2650000,
+  "discountPercentage": 5,
+  "stock": 60,
+  "thumbnail": "https://example.com/images/samsung-990-pro.jpg",
+  "status": "active",
+  "position": 11,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c16"
+  },
+  "title": "Máy cạo râu Xiaomi Enchen BlackStone 3",
+  "description": "Thiết kế 3 lưỡi cắt 3D thông minh, chống nước toàn thân.",
+  "price": 350000,
+  "discountPercentage": 30,
+  "stock": 150,
+  "thumbnail": "https://example.com/images/xiaomi-enchen.jpg",
+  "status": "active",
+  "position": 12,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c17"
+  },
+  "title": "Đèn bàn bảo vệ mắt Baseus",
+  "description": "Đèn led kẹp màn hình máy tính chống mỏi mắt, chỉnh được độ sáng.",
+  "price": 450000,
+  "discountPercentage": 10,
+  "stock": 0,
+  "thumbnail": "https://example.com/images/baseus-desk-lamp.jpg",
+  "status": "inactive",
+  "position": 13,
+  "deleted": true
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c18"
+  },
+  "title": "Robot hút bụi Xiaomi Vacuum Mop 2",
+  "description": "Lực hút 2700Pa, lập bản đồ nhà thông minh, vừa hút vừa lau.",
+  "price": 5990000,
+  "discountPercentage": 18,
+  "stock": 14,
+  "thumbnail": "https://example.com/images/xiaomi-mop-2.jpg",
+  "status": "active",
+  "position": 14,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c19"
+  },
+  "title": "Máy pha cà phê Delonghi Dedica EC685",
+  "description": "Thiết kế nhỏ gọn phong cách Ý, áp suất bơm 15 bar.",
+  "price": 6800000,
+  "discountPercentage": 12,
+  "stock": 7,
+  "thumbnail": "https://example.com/images/delonghi-ec685.jpg",
+  "status": "active",
+  "position": 15,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c1a"
+  },
+  "title": "Bình giữ nhiệt LocknLock 500ml",
+  "description": "Chất liệu thép không gỉ 316 cao cấp, giữ nhiệt lên tới 12 tiếng.",
+  "price": 320000,
+  "discountPercentage": 25,
+  "stock": 200,
+  "thumbnail": "https://example.com/images/locknlock-flask.jpg",
+  "status": "active",
+  "position": 16,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c1b"
+  },
+  "title": "Giá đỡ laptop nhôm cao cấp",
+  "description": "Có thể điều chỉnh độ cao, tản nhiệt tốt, gấp gọn tiện lợi.",
+  "price": 250000,
+  "discountPercentage": 15,
+  "stock": 85,
+  "thumbnail": "https://example.com/images/laptop-stand.jpg",
+  "status": "inactive",
+  "position": 17,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c1c"
+  },
+  "title": "Cáp sạc nhanh Baseus Type-C to C 100W",
+  "description": "Dây bọc dù siêu bền, có màn hình led hiển thị công suất sạc.",
+  "price": 180000,
+  "discountPercentage": 10,
+  "stock": 300,
+  "thumbnail": "https://example.com/images/baseus-100w-cable.jpg",
+  "status": "inactive",
+  "position": 18,
+  "deleted": false
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c1d"
+  },
+  "title": "Webcam Logitech C922 Pro Stream",
+  "description": "",
+  "price": 2290000,
+  "discountPercentage": 13,
+  "stock": 19,
+  "thumbnail": "https://example.com/images/logitech-c922.jpg",
+  "status": "inactive",
+  "position": 19,
+  "deleted": false,
+  "slug": "webcam-logitech-c922-pro-stream",
+  "updatedAt": {
+    "$date": "2026-07-04T18:36:26.506Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a205856c5a3ed034f2d0c1e"
+  },
+  "title": "Sách 'Thay đổi tí hon, hiệu quả bất ngờ'",
+  "description": "Cuốn sách kỹ năng sống bán chạy nhất của tác giả James Clear.",
+  "price": 150000,
+  "discountPercentage": 20,
+  "stock": 0,
+  "thumbnail": "https://example.com/images/atomic-habits.jpg",
+  "status": "inactive",
+  "position": 20,
+  "deleted": true
+},
+{
+  "_id": {
+    "$oid": "6a4931f66a75d97f482d8234"
+  },
+  "title": "test",
+  "description": "test",
+  "price": 1,
+  "discountPercentage": 1,
+  "stock": 1,
+  "thumbnail": "",
+  "status": "active",
+  "position": 17,
+  "deleted": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a493204e9421ee43849ebc0"
+  },
+  "title": "test",
+  "description": "test",
+  "price": 1,
+  "discountPercentage": 1,
+  "stock": 1,
+  "thumbnail": "",
+  "status": "active",
+  "position": 17,
+  "deleted": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a493cdc1da21126da009253"
+  },
+  "title": "test",
+  "description": "test",
+  "price": 1,
+  "discountPercentage": 1,
+  "stock": 1,
+  "status": "active",
+  "position": 1,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2026-07-04T17:03:24.501Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-04T17:03:24.501Z"
+  },
+  "slug": "test",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a493d2a6d20b7d27e6b1c6a"
+  },
+  "title": "test",
+  "description": "test",
+  "price": 1,
+  "discountPercentage": 1,
+  "stock": 1,
+  "status": "active",
+  "position": 1,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2026-07-04T17:04:42.031Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-04T17:04:42.031Z"
+  },
+  "slug": "test-295MbWm1I",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a493f2b4df024d940ff3e66"
+  },
+  "title": "testest",
+  "description": "",
+  "price": 1,
+  "discountPercentage": 1,
+  "stock": 1,
+  "thumbnail": "/uploads/1783190763602-HUY_2056.jpg",
+  "status": "active",
+  "position": 100,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2026-07-04T17:13:15.430Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-06T04:05:13.583Z"
+  },
+  "slug": "testest",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a494a5a9b1b78403da7e604"
+  },
+  "title": "abc",
+  "description": "",
+  "price": 0,
+  "discountPercentage": 0,
+  "stock": 0,
+  "status": "active",
+  "position": 1,
+  "deleted": true,
+  "createdAt": {
+    "$date": "2026-07-04T18:00:58.506Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-04T18:01:06.867Z"
+  },
+  "slug": "abc",
+  "__v": 0,
+  "deletedAt": {
+    "$date": "2026-07-04T18:01:06.867Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a494b629b1b78403da7e605"
+  },
+  "title": "abc",
+  "description": "",
+  "price": 0,
+  "discountPercentage": 0,
+  "stock": 0,
+  "status": "active",
+  "position": 1,
+  "deleted": true,
+  "createdAt": {
+    "$date": "2026-07-04T18:05:22.958Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-04T18:05:29.675Z"
+  },
+  "slug": "abc-KqVQzJ6gJ",
+  "__v": 0,
+  "deletedAt": {
+    "$date": "2026-07-04T18:05:29.675Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a4b2d286bafb83ce7470bba"
+  },
+  "title": "test",
+  "description": "",
+  "price": 100000,
+  "discountPercentage": 0,
+  "stock": 80,
+  "status": "active",
+  "position": 123,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2026-07-06T04:20:56.082Z"
+  },
+  "updatedAt": {
+    "$date": "2026-07-06T04:21:11.400Z"
+  },
+  "slug": "test-PbGjxFwFS",
+  "__v": 0,
+  "thumbnail": "/uploads/1783311671367-HUY_9909.jpg"
+}]

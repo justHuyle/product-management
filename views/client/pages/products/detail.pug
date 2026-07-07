@@ -1,0 +1,51 @@
+extends ../../layouts/default.pug
+include ../../mixins/box-head.pug
+
+block main
+    .container.my-3 
+        .row 
+            .col-12
+                if (product.title)
+                    h1(class="mb-3") #{product.title}
+                if (product.thumbnail)
+                    img(
+                        src=product.thumbnail,
+                        class="img-fluid",
+                        alt=product.title, 
+                        style="width: 400px; height: 300px; object-fit: cover;"
+                    )
+                if (product.price)
+                    div(class="mb-4")
+                        p <b>Giá cũ:</b> #{product.price}$ 
+                        p <b>Giá mới:</b> #{product.priceNew}$ 
+                        p <b>Giảm giá:</b> #{product.discountPercentage}%
+                if (product.stock)
+                    div(class="mb-4")
+                        p <b>Còn hàng:</b> #{product.stock} sản phẩm
+                if (product.status == "active")
+                    div(class="mb-4")
+                        p <b>Trạng thái:</b> Hoạt động
+                else 
+                    div(class="mb-4")
+                        p <b>Trạng thái:</b> Dừng hoạt động
+                if (product.description)
+                    div(class="mb-4")
+                        p <b>Mô tả:</b> #{product.description}
+                if (product.status == "active" && product.stock > 0)
+                    div(class="mb-4")
+                        button(class="btn btn-primary" type="button" data-id=product.id button-add-to-cart) Thêm vào giỏ hàng
+                        a(href="/products" class="btn btn-secondary mx-3") Quay lại
+                else
+                    div(class="mb-4")
+                        button(class="btn btn-primary" type="button" data-id=product.id button-add-to-cart disabled) Thêm vào giỏ hàng
+                        a(href="/products" class="btn btn-secondary mx-3") Quay lại
+                    
+
+    script(src="/client/js/product.js")
+
+    form(
+        action=""
+        method="POST"
+        id="form-add-to-cart"
+        data-path="/cart/add"
+    )

@@ -1,0 +1,45 @@
+extends ../../layouts/default.pug
+include ../../mixins/alert.pug
+
+block main
+    h1 Trang thêm mới sản phẩm 
+    +alert(3000)
+    form(action=`${prefixAdmin}/products/create?_method=POST`, method="POST", enctype="multipart/form-data") 
+        div(class="form-group") 
+            label(for="title") Tiêu đề
+            input(type="text", name="title", id="title", class="form-control")
+        
+        div(class="form-group") 
+            label(for="description") Mô tả
+            textarea(name="description", id="description", class="form-control", rows="5")
+        
+        div(class="form-group") 
+            label(for="price") Giá
+            input(type="text", name="price", id="price", class="form-control", min=0, placeholder="Giá")
+        
+        div(class="form-group") 
+            label(for="discount") Giảm giá
+            input(type="number", name="discountPercentage", id="discount", class="form-control", value=0, min=0, max=100, placeholder="Phần trăm giảm giá")
+        
+        div(class="form-group") 
+            label(for="stock") Số lượng
+            input(type="number", name="stock", id="stock", class="form-control", min=0, placeholder="Số lượng tồn kho")
+        
+        div(class="form-group" upload-image) 
+            label(for="thumbnail") Hình ảnh
+            input(type="file", name="thumbnail", id="thumbnail", class="form-control-file" accept="image/*" upload-image-input)
+            img(src="" upload-image-preview class="image-preview")
+            button(type="button" class="btn btn-danger mt-3 d-none clear-image" clear-image) Xóa ảnh
+        
+        div(class="form-group") 
+            label(for="position") Vị trí
+            input(type="number", name="position", id="position", class="form-control", value=1, min=1, placeholder="Vị trí")
+        
+        div(class="form-group") 
+            label(for="status") Trạng thái
+            select(name="status", id="status", class="form-control")
+                option(value="active") Hoạt động    
+                option(value="inactive") Dừng hoạt động
+        button(type="submit", class="btn btn-primary") Lưu
+    
+    script(src="/admin/js/product.js")

@@ -1,0 +1,59 @@
+extends ../../layouts/default.pug
+include ../../mixins/alert.pug
+
+block main
+    h1 Trang chi tiết sản phẩm #{product.title}
+    .row
+        .col-6 
+            if product.thumbnail
+                if (product.thumbnail.startsWith("http") || product.thumbnail.startsWith("/"))
+                    img(src=product.thumbnail, alt=product.title, class="img-fluid")
+                else
+                    img(src=`/${product.thumbnail}`, alt=product.title, class="img-fluid")
+        .col-6 
+            table(class="table table-bordered")
+                tbody
+                    tr 
+                        th Tên sản phẩm
+                        td #{product.title}
+                    tr 
+                        th Mô tả
+                        td #{product.description}
+                    tr 
+                        th Giá
+                        td #{product.price}
+                    tr 
+                        th Giảm giá (%) 
+                        td #{product.discountPercentage}
+                    tr 
+                        th Giá sau khi giảm
+                        td #{product.price - product.price * product.discountPercentage / 100}
+                    tr 
+                        th Số lượng
+                        td #{product.stock}
+                    tr 
+                        th Vị trí
+                        td #{product.position}
+                    tr 
+                        th Trạng thái
+                        td #{product.status}
+                    tr 
+                        th Tạo bởi
+                        td 
+                            if(product.createdBy)
+                                td #{product.createdBy}
+                            else 
+                                td Chưa cập nhật
+                    tr 
+                        th Tạo tại
+                        td #{product.createdAt}
+                    tr 
+                        th Cập nhật tại
+                        td #{product.updatedAt}
+                    tr 
+                        th Xóa tại
+                        td #{product.deletedAt}
+            a(href=`${prefixAdmin}/products/edit/${product.id}`)
+                button(type="button", class="btn btn-primary") Sửa
+            a(href=`${prefixAdmin}/products`, class="btn btn-primary mx-2") Quay lại
+    script(src="/admin/js/product.js")
