@@ -1,0 +1,41 @@
+extends ../../layouts/default.pug
+include ../../mixins/alert.pug
+
+block main
+    h1 Trang chỉnh sửa danh mục sản phẩm 
+    +alert(3000)
+    form(action=`${prefixAdmin}/categories/edit/${category.id}?_method=PATCH`, method="POST", enctype="multipart/form-data") 
+        div(class="form-group") 
+            label(for="title") Tiêu đề
+            input(type="text", name="title", id="title", class="form-control", value=category.title)
+        
+        div(class="form-group") 
+            label(for="parent-id") Danh mục cha
+            select(name="parentId", id="parent-id", class="form-control")
+                option(value="") - Chọn danh mục cha -
+                each item in categories 
+                    option(value=item.id, selected=(category.parent_id == item.id) ? true : false)
+                        | #{item.title} 
+
+        div(class="form-group") 
+            label(for="description") Mô tả
+            textarea(name="description", id="description", class="form-control", rows="5", value=category.description)
+        
+        div(class="form-group" upload-image) 
+            label(for="thumbnail") Hình ảnh
+            input(type="file", name="thumbnail", id="thumbnail", class="form-control-file" accept="image/*" upload-image-input)
+            img(src=`${category.thumbnail}` upload-image-preview class="image-preview")
+            button(type="button" class="btn btn-danger mt-3 clear-image" clear-image) Xóa ảnh
+        
+        div(class="form-group") 
+            label(for="position") Vị trí
+            input(type="number", name="position", id="position", class="form-control", value=category.position, min=1)
+        
+        div(class="form-group") 
+            label(for="status") Trạng thái
+            select(name="status", id="status", class="form-control")
+                option(value="active", selected=(category.status !== "inactive") ? true : false) Hoạt động    
+                option(value="inactive", selected=(category.status !== "active") ? true : false) Dừng hoạt động
+        button(type="submit", class="btn btn-primary") Lưu
+    
+    script(src="/admin/js/product.js")

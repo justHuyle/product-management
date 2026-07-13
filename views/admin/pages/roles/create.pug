@@ -1,0 +1,24 @@
+extends ../../layouts/default.pug
+include ../../mixins/alert.pug
+
+block main
+    h1 Trang thêm mới vai trò 
+    +alert(3000)
+    form(action=`${prefixAdmin}/roles/create?_method=POST`, method="POST") 
+        div(class="form-group") 
+            label(for="name") Tên vai trò
+            input(type="text", name="name", id="name", class="form-control" required)
+        
+        div(class="form-group") 
+            label(for="description") Mô tả
+            textarea(name="description", id="description", class="form-control", rows="5")
+        
+        //- div(class="form-group" upload-image) 
+        //-     label(for="thumbnail") Hình ảnh
+        //-     input(type="file", name="thumbnail", id="thumbnail", class="form-control-file" accept="image/*" upload-image-input)
+        //-     img(src="" upload-image-preview class="image-preview")
+        //-     button(type="button" class="btn btn-danger mt-3 d-none clear-image" clear-image) Xóa ảnh
+    
+        button(type="submit", class="btn btn-primary") Lưu
+    
+    script(src="/admin/js/role.js")

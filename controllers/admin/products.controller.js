@@ -1,9 +1,11 @@
 // [GET] /admin/products
 const Product = require("../../models/products.models");
+const Category = require("../../models/category.models");
 const searchHelper = require("../../helpers/search");
 const filterStatusHelper = require("../../helpers/filterStatus");
 const paginationHelper = require("../../helpers/pagination");
 const systemConfig = require("../../config/system");
+const createTreeHelper = require("../../helpers/createTree");
 
 // [GET] /admin/products
 module.exports.index = async (req, res) => {
@@ -114,8 +116,11 @@ module.exports.deleteItem = async (req, res) => {
 
 // [GET] /admin/products/create
 module.exports.create = async (req, res) => {
+  const categories = await Category.find({ deleted: false });
+  const treeCategories = createTreeHelper.tree(categories);
   res.render("admin/pages/products/create.pug", {
     pageTitle: "Thêm mới sản phẩm",
+    categories: treeCategories,
   });
 };
 
@@ -149,9 +154,12 @@ module.exports.edit = async (req, res) => {
       res.redirect(`${systemConfig.prefixAdmin}/products`);
       return;
     }
+    const categories = await Category.find({ deleted: false });
+    const treeCategories = createTreeHelper.tree(categories);
     res.render("admin/pages/products/edit.pug", {
       pageTitle: "Chỉnh sửa sản phẩm",
       product: product,
+      categories: treeCategories,
     });
   } catch (error) {
     res.redirect(`${systemConfig.prefixAdmin}/products`);

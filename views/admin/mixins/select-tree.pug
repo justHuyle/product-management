@@ -1,0 +1,6 @@
+mixin select-tree(items, selectedId="", level=1) 
+    each item in items 
+        -const prefix = Array(level+1).join("-- ")
+        option(value=item.id, selected=!!(selectedId && selectedId == item.id)) #{prefix} #{item.title}
+        if (item.children && item.children.length > 0)
+            +select-tree(item.children, selectedId, level+1)

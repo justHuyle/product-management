@@ -1,0 +1,15 @@
+extends ../../layouts/default.pug
+include ../../mixins/alert.pug
+
+block main
+    h1 Trang thêm mới vai trò 
+    +alert(3000)
+    form(action=`${prefixAdmin}/roles/edit/${role.id}?_method=PATCH`, method="POST") 
+        div(class="form-group") 
+            label(for="name") Tên vai trò
+            input(type="text", name="name", id="name", class="form-control" required value=role.name)
+        div(class="form-group") 
+            label(for="description") Mô tả
+            textarea(name="description", id="description", class="form-control" rows="5") #{role.description}
+        button(type="submit", class="btn btn-primary") Lưu
+    script(src="/admin/js/role.js")

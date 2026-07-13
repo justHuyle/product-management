@@ -1,0 +1,71 @@
+extends ../../layouts/default.pug
+include ../../mixins/formChangeMulti.pug
+include ../../mixins/alert.pug
+block main
+
+    +alert(3000)
+    h1 Trang quản lý vai trò
+
+    .card.mb-3 
+        .card-header Bộ lọc và Tìm kiếm
+        .card-body 
+            .row
+                .col-6 
+                    form(id="form-search" action="" method="GET")
+                        .input-group 
+                            input(type="text", name="keyword", placeholder="Nhập từ khóa tìm kiếm", class="form-control", value=(keyword || ""))
+                            .input-group-append 
+                                button(class="btn btn-outline-success", type="submit") Tìm kiếm
+    
+    .card.mb-3 
+        .card-header Danh sách vai trò
+        .card-body 
+            .row 
+                .col-8 
+                    +form-change-multi(`${prefixAdmin}/roles/change-multi?_method=PATCH`)
+                .col-4 
+                    a(href=`${prefixAdmin}/roles/create`, class="btn btn-success btn-sm") + Thêm mới 
+
+    div(class="card mb-3")
+        .card-header Danh sách vai trò
+        .card-body 
+            table(class="table table-hover table-sm" checkbox-multi)
+                thead
+                    tr
+                        th 
+                            input(type="checkbox", name="checkall")
+                        th STT
+                        th Tên vai trò
+                        th Mô tả
+                        th Hành động
+                tbody 
+                    if roles.length > 0
+                        each item, index in roles
+                            tr
+                                td 
+                                    input(type="checkbox", name="id", value=item.id)
+                                td #{index + 1}
+                                td #{item.name}
+                                td #{item.description}
+                                td 
+                                    a(href=`${prefixAdmin}/roles/detail/${item.id}`, class="btn btn-info btn-sm") Chi tiết
+                                    a(href=`${prefixAdmin}/roles/edit/${item.id}`, class="btn btn-warning btn-sm") Sửa
+                                    button(class="btn btn-danger btn-sm" data-id=item.id button-delete) Xóa 
+                    else
+                        tr 
+                            td(colspan="5") Không có dữ liệu 
+
+    form(
+        action=""
+        method="POST"
+        id="form-change-status"
+        data-path=`${prefixAdmin}/roles/change-status`
+    )
+
+    form(
+        action=""
+        method="POST"
+        id="form-delete-item"
+        data-path=`${prefixAdmin}/roles/delete`
+    )
+    script(src="/admin/js/role.js")

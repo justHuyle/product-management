@@ -1,5 +1,6 @@
 extends ../../layouts/default.pug
 include ../../mixins/alert.pug
+include ../../mixins/select-tree.pug
 
 block main
     h1 Trang chỉnh sửa sản phẩm 
@@ -8,6 +9,12 @@ block main
         div(class="form-group") 
             label(for="title") Tiêu đề
             input(type="text", name="title", id="title", class="form-control", value=product.title)
+        
+        div(class="form-group") 
+            label(for="categoryId") Danh mục 
+            select(name="product_category_id" id="product_category_id" class="form-control")
+                option(value="") Chọn danh mục 
+                +select-tree(categories, product.product_category_id)
         
         div(class="form-group") 
             label(for="description") Mô tả
